@@ -1,11 +1,21 @@
+import { Route, RouteProps, Routes } from "react-router-dom"
 import MainHeader from "./components/layout/MainHeader"
+import { routes } from "./routes"
 
 function App() {
+  const allRoutes = routes.map((routeItem: RouteProps) => {
+    return <Route path={routeItem.path} element={routeItem.element}></Route>
+  })
 
   return (
-    <div className="main-container">
+    <>
       <MainHeader />
-    </div>
+      <div className="main-container">
+        <Routes>
+          {allRoutes}
+        </Routes>
+      </div>
+    </>
   )
 }
 
