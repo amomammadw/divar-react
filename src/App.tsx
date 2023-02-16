@@ -3,8 +3,8 @@ import MainHeader from "./components/layout/MainHeader"
 import { routes } from "./routes"
 
 function App() {
-  const allRoutes = routes.map((routeItem: RouteProps) => {
-    return <Route path={routeItem.path} element={routeItem.element}></Route>
+  const allRoutes = routes.map((routeItem: RouteProps, routeIndex: number) => {
+    return <Route key={routeIndex} path={routeItem.path} element={routeItem.element}></Route>
   })
 
   return (

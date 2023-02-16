@@ -1,14 +1,14 @@
 import AppLogo from '../base/app-logo/AppLogo'
-import { MapPinIcon, UserIcon } from '@heroicons/react/24/outline'
+import { MapPinIcon, UserIcon, ChatBubbleLeftIcon } from '@heroicons/react/24/outline'
 import AppButton from '../base/app-button/AppButton'
 
 function MainHeader() {
     return (
         <div className='border-b py-3 my-3 sticky top-5'>
             <header className='main-container'>
-                <nav className='grid grid-cols-12'>
+                <nav className='grid grid-cols-12 items-center'>
                     <div className='lg:col-span-2'>
-                        <div className='flex gap-1'>
+                        <div className='flex items-center gap-1'>
                             <AppLogo />
 
                             <AppButton>
@@ -34,6 +34,7 @@ function MainHeader() {
                             </AppButton>
 
                             <AppButton>
+                                <ChatBubbleLeftIcon className='w-6' />
                                 چت
                             </AppButton>
 
